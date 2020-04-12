@@ -6,6 +6,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { AuthGuard } from "./shared/guard/auth.guard";
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { CommonModule } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
 { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -18,6 +21,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule],
