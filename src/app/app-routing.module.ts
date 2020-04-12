@@ -20,6 +20,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  declarations: [SignInComponent, SignUpComponent, DashboardComponent, ForgotPasswordComponent, VerifyEmailComponent]
 })
 export class AppRoutingModule { }
